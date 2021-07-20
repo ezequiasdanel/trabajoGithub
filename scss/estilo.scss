@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@keyframes aparecer{/*efecto de aparicion titulos paginas*/
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 50%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+@mixin textos( $colorletra , $tamañoLetra , $colorFondo){
+    color: $colorletra;
+    font-size: $tamañoLetra;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: $colorFondo;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+.header{ /*navbar y logo de pagina*/
+    background-image: linear-gradient(to left,rgb(12, 227, 235), rgb(25, 108, 110));
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    &__logo{
+        width: 20%;
+        height: 100px;
+    }
+    
+    &__lista{
+        display: flex;
+        list-style: none;
+        color: whitesmoke;
+        text-align: center;
+    
+    }
+    
+    &__item{
+        margin-right: 10px;
+
+    }
+    
+    &__link{
+        font-size: 25px;
+        text-decoration: none;
+        color: whitesmoke;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    }
+    
+    &__link:hover{
+        color: yellow;
+    }
+
+}
+.footer{ /*redes sociales*/
+    justify-content: space-around;
+    margin-top: 10px;
+    @extend .header
+    
+}
+.titulosDePagina{/*titulos de las paginas*/
+    text-align: initial;
+    text-decoration: underline;
+    font-family: cursive;
+    font-style: oblique;
+    padding: 15px 15px 15px 15px;
+    font-size: 65px;
+    animation-duration: 2s;
+    animation-name: aparecer;
+}
+.cajaComponentes{ /*main de pagina componentes y titulos de componentes*/
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center; 
+    &__titulos{
+        border-top: 5px solid rgb(8, 131, 202);
+        border-bottom: 5px solid rgb(8, 131, 202);
+        margin: 50px 60px 50px 60px;
+        padding: 5px 5px 5px 5px;
+        font-family: fantasy;
+        font-size: 30px;
+    }
+    &__cardProduct{
+        margin: 5px;
+        padding: 16px;
+        background-color: rgba(139, 133, 133, 0);
+        width: 30%;
+        border-radius: 16px;
+        color: rgb(0, 0, 0);
+    }
+    &__imagen{
+        display: flex;
+        justify-content: center;
+        background-color: rgba(128, 128, 128, 0);
+        margin-bottom: 15px;
+    }
+    &__productos{
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
+.imagenesInicio{/*imagenes de el carrousel*/
+    width: 100%;
+    height: 800px;
+}
+.mainClientes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+
+}
+.clientesProductos{
+    padding: 30px 30px 30px 30px;
+    height: 300px;
+    width: 300px; 
+}
+
+.nombresDeTrabajos{
+    
+    @include textos(whitesmoke, 18px, rgb(10, 218, 233)    )
+    
+    &__descripcion{
+        @include textos(whitesmoke , 18px, rgb(10, 218, 233))
+    }
+}
