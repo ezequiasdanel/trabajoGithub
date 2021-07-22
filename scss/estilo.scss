@@ -1,172 +1,180 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-@keyframes aparecer{/*efecto de aparicion titulos paginas*/
-    0%{
-        opacity: 0%;
-    }
-    50%{
-        opacity: 50%;
-    }
-    100%{
-        opacity: 100%;
-    }
+@keyframes aparecer {
+  /*efecto de aparicion titulos paginas*/
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
-@mixin textos( $colorletra , $tamañoLetra , $colorFondo){
-    color: $colorletra;
-    font-size: $tamañoLetra;
-    font-family: 'Times New Roman', Times, serif;
-    background-color: $colorFondo;
-    text-align: center;
+@mixin textos($colorletra, $tamañoLetra, $colorFondo) {
+  color: $colorletra;
+  font-size: $tamañoLetra;
+  font-family: "Times New Roman", Times, serif;
+  background-color: $colorFondo;
+  text-align: center;
 }
-.header{ /*navbar y logo de pagina*/
-    background-image: linear-gradient(to left, rgb(21, 22, 22), rgb(2, 50, 51));
-    margin: 0;
-    padding: 0;
-    height: 7rem;
-    width: 100%;
+
+.header {
+  /*navbar y logo de pagina*/
+  background-image: linear-gradient(to left, rgb(21, 22, 22), rgb(2, 50, 51));
+  margin: 0;
+  padding: 0;
+  height: 7rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  @media only screen and (max-width: 647px) {
+    flex-direction: column;
+    height: 150px;
+  }
+  &__logo {
+    /*logo de la pagina*/
+    font-family: fantasy;
+    text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    top: 0;
-    @media only screen and (max-width: 600px){
-        flex-direction: column;
-        height: 150px;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    @media only screen and (max-width: 647px) {
+      font-size: 0.9rem;
     }
-    &__logo{
-        /*logo de la pagina*/
-        font-family: fantasy;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        font-size: 1.2rem;
-        color: whitesmoke;
-        @media only screen and (max-width: 600px){
-        font-size: 0.9rem
-    }
-    }
-    &__logo:hover{
+  }
+  &__logo:hover {
+    color: whitesmoke;
+  }
 
-        color: whitesmoke;
-    }
-    
-    &__lista{
-        display: flex;
-        list-style: none;
-        color: whitesmoke;
-        text-align: center;
-        @media only screen and (max-width: 600px){
-            flex-direction: column;
-            padding-top: 1px;
-        }
-    
-    }
-    
-    &__item{
-        margin-right: 10px;
-
-    }
-    
-    &__link{
-        display: flex;
-        font-size: 1.2rem;
-        text-decoration: none;
-        color: whitesmoke;
-        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
-        @media only screen and (max-width: 600px){
-            font-size: 0.9rem;
-            padding-top: 1.2px;
-            
-        }
-    }
-    
-    &__link:hover{
-        color: yellow;
-    }
-
-}
-.footer{ /*redes sociales*/
-    justify-content: space-around;
-
-    @extend .header
-    
-}
-.titulosDePagina{/*titulos de las paginas*/
-    text-decoration: none;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding: 15px 15px 0px 15px;
-    font-size: 4rem;
-    animation-duration: 2s;
-    animation-name: aparecer;
-}
-.cajaComponentes{ /*main de pagina componentes y titulos de componentes*/
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center; 
-    &__titulos{
-        border-top: 5px solid rgb(8, 131, 202);
-        border-bottom: 5px solid rgb(8, 131, 202);
-        margin: 20px 60px 50px 60px;
-        padding: 5px 5px 5px 5px;
-        font-family: fantasy;
-        font-size: 30px;
-    }
-    &__cardProduct{
-        margin: 20px;
-        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-        width: 330px;
-        height: 250px;
-        border-radius: 8px;
-        overflow: hidden;
-        text-align: center;
-        transition: all 0.25s;
-        
-    }
-
-    &__cardProduct:hover{
-        transform: translateY(-15px);
-        box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-
-    }
-    &__imagen{
-        margin-bottom: 15px;
-    }
-    &__productos{
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        text-align: center;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-}
-.imagenesInicio{/*imagenes de el carrousel*/
-    width: 100%;
-    height: 800px;
-}
-.mainClientes{
+  &__lista {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: space-around;
-
-}
-.clientesProductos{
-    height: 300px;
-    width: 300px; 
-}
-
-.nombresDeTrabajos{
-    
-    @include textos(whitesmoke, 18px, rgb(10, 218, 233));
-    
-    &__descripcion{
-        @include textos(whitesmoke , 18px, rgb(10, 218, 233));
+    list-style: none;
+    color: whitesmoke;
+    text-align: center;
+    @media only screen and (max-width: 647px) {
+      flex-direction: column;
+      padding-top: 1px;
     }
+  }
+
+  &__item {
+    margin-right: 10px;
+  }
+
+  &__link {
+    display: flex;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    @media only screen and (max-width: 647px) {
+      font-size: 0.9rem;
+      padding-top: 1.2px;
+    }
+  }
+
+  &__link:hover {
+    color: yellow;
+  }
 }
-.cardClientes{
-    height: 400px;
-    width: 300px;
+.footer {
+  /*redes sociales*/
+  justify-content: space-around;
+
+  @extend .header;
+}
+.titulosDePagina {
+  /*titulos de las paginas*/
+  text-decoration: none;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 3.5rem;
+  animation-duration: 2s;
+  animation-name: aparecer;
+}
+.cajaComponentes {
+  /*main de pagina componentes y titulos de componentes*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__titulos {
+    border-top: 5px solid rgb(2, 50, 51);
+    border-bottom: 5px solid rgb(2, 50, 51);
+    padding: 5px 5px 5px 5px;
+    font-family: fantasy;
+    font-size: 30px;
+  }
+  &__cardProduct {
+    margin: 20px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    width: 330px;
+    height: 250px;
     border-radius: 8px;
     overflow: hidden;
     text-align: center;
+    transition: all 0.25s;
+    cursor: pointer;
+  }
+
+  &__cardProduct:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  }
+  &__imagen {
+    margin-bottom: 15px;
+  }
+  &__productos {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+.imagenesInicio {
+  /*imagenes de el carrousel*/
+  width: 100%;
+  height: 800px;
+}
+.mainClientes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-around;
+}
+.clientesProductos {
+  height: 300px;
+  width: 300px;
+}
+
+.nombresDeTrabajos {
+  margin: 0;
+
+  @include textos(whitesmoke, 18px, rgb(10, 218, 233));
+
+  &__descripcion {
+    margin: 0;
+    @include textos(whitesmoke, 18px, rgb(10, 218, 233));
+  }
+}
+.cardClientes {
+  margin: 10px;
+  height: auto;
+  width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+.relleno {
+  margin-bottom: 500px;
+  &__Soporte {
+    margin-bottom: 300px;
+  }
 }

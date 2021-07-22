@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: space-between;
   top: 0; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 647px) {
     .header, .footer {
       flex-direction: column;
       height: 150px; } }
@@ -34,7 +34,7 @@
     align-items: center;
     font-size: 1.2rem;
     color: whitesmoke; }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 647px) {
       .header__logo {
         font-size: 0.9rem; } }
   .header__logo:hover {
@@ -44,7 +44,7 @@
     list-style: none;
     color: whitesmoke;
     text-align: center; }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 647px) {
       .header__lista {
         flex-direction: column;
         padding-top: 1px; } }
@@ -55,8 +55,8 @@
     font-size: 1.2rem;
     text-decoration: none;
     color: whitesmoke;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
-    @media only screen and (max-width: 600px) {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
+    @media only screen and (max-width: 647px) {
       .header__link {
         font-size: 0.9rem;
         padding-top: 1.2px; } }
@@ -70,9 +70,8 @@
 .titulosDePagina {
   /*titulos de las paginas*/
   text-decoration: none;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  padding: 15px 15px 0px 15px;
-  font-size: 4rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 3.5rem;
   animation-duration: 2s;
   animation-name: aparecer; }
 
@@ -82,9 +81,8 @@
   flex-wrap: wrap;
   justify-content: center; }
   .cajaComponentes__titulos {
-    border-top: 5px solid #0883ca;
-    border-bottom: 5px solid #0883ca;
-    margin: 20px 60px 50px 60px;
+    border-top: 5px solid #023233;
+    border-bottom: 5px solid #023233;
     padding: 5px 5px 5px 5px;
     font-family: fantasy;
     font-size: 30px; }
@@ -96,14 +94,15 @@
     border-radius: 8px;
     overflow: hidden;
     text-align: center;
-    transition: all 0.25s; }
+    transition: all 0.25s;
+    cursor: pointer; }
   .cajaComponentes__cardProduct:hover {
     transform: translateY(-15px);
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2); }
   .cajaComponentes__imagen {
     margin-bottom: 15px; }
   .cajaComponentes__productos {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     text-align: center;
     margin-top: 15px;
     margin-bottom: 15px; }
@@ -124,21 +123,29 @@
   width: 300px; }
 
 .nombresDeTrabajos {
+  margin: 0;
   color: whitesmoke;
   font-size: 18px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   background-color: #0adae9;
   text-align: center; }
   .nombresDeTrabajos__descripcion {
+    margin: 0;
     color: whitesmoke;
     font-size: 18px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
     background-color: #0adae9;
     text-align: center; }
 
 .cardClientes {
-  height: 400px;
+  margin: 10px;
+  height: auto;
   width: 300px;
   border-radius: 8px;
   overflow: hidden;
   text-align: center; }
+
+.relleno {
+  margin-bottom: 500px; }
+  .relleno__Soporte {
+    margin-bottom: 300px; }
