@@ -1,6 +1,12 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+footer{
+  background-image: linear-gradient(to left, rgb(21, 22, 22), rgb(2, 50, 51));
+  width: 100%;
+  color: whitesmoke;
 }
 @keyframes aparecer {
   /*efecto de aparicion titulos paginas*/
@@ -85,11 +91,43 @@
     color: yellow;
   }
 }
-.footer {
+.footer{
   /*redes sociales*/
-  justify-content: space-around;
+  display: flex; 
+  max-width: 1200px;
+  margin: auto;
 
-  @extend .header;
+  &__redes{
+    max-width: 600px;
+}
+&__contacto{
+  max-width: 600px;
+}
+&__contactos{
+  margin-top: 20px;
+  display: flex;
+  
+}
+&__titulos{
+  font-size: 30px;
+}
+  &__link{
+    margin-top: 20px;
+    display: flex;
+    text-decoration: none;
+    color: whitesmoke;
+}
+&__link:hover{
+  color: yellow;
+  
+}
+  &__imagen{
+    width: 36px;
+    height: 36px;
+    margin-right: 5px;
+
+  }
+  
 }
 .titulosDePagina {
   /*titulos de las paginas*/
@@ -157,11 +195,11 @@
 .nombresDeTrabajos {
   margin: 0;
 
-  @include textos(whitesmoke, 18px, rgb(10, 218, 233));
+  @include textos(whitesmoke, 18px, rgb(2, 50, 51));
 
   &__descripcion {
     margin: 0;
-    @include textos(whitesmoke, 18px, rgb(10, 218, 233));
+    @include textos(whitesmoke, 18px, rgb(2, 50, 51));
   }
 }
 .cardClientes {

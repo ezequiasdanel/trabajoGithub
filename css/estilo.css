@@ -1,6 +1,12 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
+
+footer {
+  background-image: linear-gradient(to left, #151616, #023233);
+  width: 100%;
+  color: whitesmoke; }
 
 @keyframes aparecer {
   /*efecto de aparicion titulos paginas*/
@@ -11,7 +17,7 @@
   100% {
     opacity: 100%; } }
 
-.header, .footer {
+.header {
   /*navbar y logo de pagina*/
   background-image: linear-gradient(to left, #151616, #023233);
   margin: 0;
@@ -23,7 +29,7 @@
   justify-content: space-between;
   top: 0; }
   @media only screen and (max-width: 647px) {
-    .header, .footer {
+    .header {
       flex-direction: column;
       height: 150px; } }
   .header__logo {
@@ -65,7 +71,29 @@
 
 .footer {
   /*redes sociales*/
-  justify-content: space-around; }
+  display: flex;
+  max-width: 1200px;
+  margin: auto; }
+  .footer__redes {
+    max-width: 600px; }
+  .footer__contacto {
+    max-width: 600px; }
+  .footer__contactos {
+    margin-top: 20px;
+    display: flex; }
+  .footer__titulos {
+    font-size: 30px; }
+  .footer__link {
+    margin-top: 20px;
+    display: flex;
+    text-decoration: none;
+    color: whitesmoke; }
+  .footer__link:hover {
+    color: yellow; }
+  .footer__imagen {
+    width: 36px;
+    height: 36px;
+    margin-right: 5px; }
 
 .titulosDePagina {
   /*titulos de las paginas*/
@@ -127,14 +155,14 @@
   color: whitesmoke;
   font-size: 18px;
   font-family: "Times New Roman", Times, serif;
-  background-color: #0adae9;
+  background-color: #023233;
   text-align: center; }
   .nombresDeTrabajos__descripcion {
     margin: 0;
     color: whitesmoke;
     font-size: 18px;
     font-family: "Times New Roman", Times, serif;
-    background-color: #0adae9;
+    background-color: #023233;
     text-align: center; }
 
 .cardClientes {
